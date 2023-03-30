@@ -81,8 +81,8 @@ function GetCallback() {
             str = str + "\n" + STUD_ARR[i][0] + " " + state
         }
     }
-    window.Telegram.WebApp.sendData(str)
-    // return str
+    //window.Telegram.WebApp.sendData(str)
+     return str
 }
 window.onload = function () {
     for (var i = 0; i < STUD_ARR.length; i = i + 1) {
@@ -95,7 +95,7 @@ window.onload = function () {
 
     tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
     tg.MainButton.isVisible = true;
-    tg.MainButton.onClick(() => alert('submitted'));
+    tg.MainButton.onClick(() => window.Telegram.WebApp.sendData(GetCallback()));
      //tg.MainButton.onClick(GetCallback)
     // tg.MainButton.onClick(function () {
     // tg.sendData(GetCallback());
