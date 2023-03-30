@@ -95,7 +95,7 @@ window.onload = function () {
 
     tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
     tg.MainButton.isVisible = true;
-    tg.MainButton.onClick(() => window.Telegram.WebApp.sendData(GetCallback()));
+    tg.MainButton.onClick(() => window.Telegram.WebApp.MainButton.text = "Отправить сведен";);
      //tg.MainButton.onClick(GetCallback)
     // tg.MainButton.onClick(function () {
     // tg.sendData(GetCallback());
