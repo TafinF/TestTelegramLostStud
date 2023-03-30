@@ -74,7 +74,7 @@ function addRow(name, id) {
 
 }
 function GetCallback() {
-    str = "Для " +CLASS_NAME + " передано:"
+    str = "Для " + CLASS_NAME + " передано:"
     for (var i = 0; i < STUD_ARR.length; i = i + 1) {
         if (STUD_ARR[i][1] != STATE_STUD.Here) {
             state = STUD_ARR[i][1] == STATE_STUD.Ill ? "болеет" : "по причине"
@@ -82,7 +82,7 @@ function GetCallback() {
         }
     }
     //window.Telegram.WebApp.sendData(str)
-     return str
+    return str
 }
 window.onload = function () {
     for (var i = 0; i < STUD_ARR.length; i = i + 1) {
@@ -95,10 +95,14 @@ window.onload = function () {
 
     tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
     tg.MainButton.isVisible = true;
-    tg.MainButton.onClick(() => window.Telegram.WebApp.MainButton.text = "Отправить сведен");
-     //tg.MainButton.onClick(GetCallback)
+    tg.MainButton.onClick(() => {
+        window.Telegram.WebApp.MainButton.text = "Отправить сведен";
+        window.Telegram.WebApp.sendData("str")
+        window.Telegram.WebApp.MainButton.text = "Rtr";
+    });
+    //tg.MainButton.onClick(GetCallback)
     // tg.MainButton.onClick(function () {
     // tg.sendData(GetCallback());
     //при клике на основную кнопку отправляем данные в строковом виде
-// });
+    // });
 };
