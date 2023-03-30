@@ -44,7 +44,7 @@ function ClickButton() {
         STUD_ARR[numberButton][1] = state
         this.classList.add("pres");
     }
-    console.log(GetCallback())
+    // console.log(GetCallback())
 }
 
 function addRow(name, id) {
@@ -81,7 +81,8 @@ function GetCallback() {
             str = str + "\n" + STUD_ARR[i][0] + " " + state
         }
     }
-    return str
+    window.Telegram.WebApp.sendData(str)
+    // return str
 }
 window.onload = function () {
     for (var i = 0; i < STUD_ARR.length; i = i + 1) {
@@ -94,8 +95,9 @@ window.onload = function () {
 
     tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
     tg.MainButton.isVisible = true;
-    tg.MainButton.onClick(function () {
-    tg.sendData(GetCallback());
+    tg.MainButton.onClick(GetCallback)
+    // tg.MainButton.onClick(function () {
+    // tg.sendData(GetCallback());
     //при клике на основную кнопку отправляем данные в строковом виде
-});
+// });
 };
