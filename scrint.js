@@ -95,7 +95,8 @@ window.onload = function () {
 
     tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
     tg.MainButton.isVisible = true;
-    tg.MainButton.onClick(GetCallback)
+    tg.MainButton.onClick(() => alert('submitted'));
+     //tg.MainButton.onClick(GetCallback)
     // tg.MainButton.onClick(function () {
     // tg.sendData(GetCallback());
     //при клике на основную кнопку отправляем данные в строковом виде
