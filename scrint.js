@@ -94,11 +94,8 @@ window.onload = function () {
 
     tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
     tg.MainButton.isVisible = true;
-};
-
-
-
-Telegram.WebApp.onEvent('mainButtonClicked', function () {
+    Telegram.WebApp.onEvent('mainButtonClicked', function () {
     tg.sendData(GetCallback());
     //при клике на основную кнопку отправляем данные в строковом виде
 });
+};
