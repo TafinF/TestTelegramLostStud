@@ -88,15 +88,16 @@ window.onload = function () {
         addRow(STUD_ARR[i][0], i)
     }
     console.log(STUD_ARR)
+    let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+
+    tg.expand(); //расширяем на все окно  
+
+    tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
+    tg.MainButton.isVisible = true;
 };
 
 
-let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
-tg.expand(); //расширяем на все окно  
-
-tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
-tg.MainButton.isVisible = true
 Telegram.WebApp.onEvent('mainButtonClicked', function () {
     tg.sendData(GetCallback());
     //при клике на основную кнопку отправляем данные в строковом виде
