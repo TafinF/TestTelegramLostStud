@@ -10,51 +10,12 @@
     <title>Document</title>
 </head>
 <style type="text/css">
-    .bloc {
-
-        width: 100%;
-        /* background-color: blue; */
-        margin-top: 3px;
-    }
-
-    .name {
-        width: 50%;
-        /* height: max-content; */
-        float: left;
-        font-size: 14pt;
-        text-align: center;
-        /* background-color: rgb(157, 255, 0); */
-    }
-
-    .ill {
-        font-size: 14pt;
-        width: 22%;
-        background: #d4d8db;
-        border-radius: 0px;
-        border: 2px solid #354251;
-
-    }
-
-    .reason {
-        font-size: 14pt;
-        width: 22%;
-        background: #d4d8db;
-        border-radius: 0px;
-        border: 2px solid #354251;
-        margin-left: 3px;
-    }
-
-    .pres {
-        background: #354251;
-        color: #ffffff;
-        border: 2px solid #354251;
-    }
 </style>
 
 <body>
-    <!-- <div class="bloc">
-        <div class="name">Маржин Максим</div><button class="ill">Болеет</button><button class="reason">Причина</button>
-    </div> -->
+    <label for="name">Name (4 to 8 characters):</label>
+
+    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
 </body>
 
 </html>
