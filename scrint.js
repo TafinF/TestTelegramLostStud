@@ -15,9 +15,5 @@ window.onload = function () {
         window.Telegram.WebApp.sendData("str")
         //window.Telegram.WebApp.MainButton.text = "Rtr";
     });
-    //tg.MainButton.onClick(GetCallback)
-    // tg.MainButton.onClick(function () {
-    // tg.sendData(GetCallback());
-    //при клике на основную кнопку отправляем данные в строковом виде
-    // });
+
 };
