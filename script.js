@@ -1,13 +1,10 @@
 window.onload = function () {
-    let textName = document.createElement('div');
-    textName.className = "name";
-    textName.innerHTML = "g";
-    document.body.append(textName);
+
     
     let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
     tg.expand(); //расширяем на все окно  
-    tg.initDataUnsafe.user.language_code
+    
     tg.MainButton.text = "Отправить сведения"; //изменяем текст кнопки 
     tg.MainButton.isVisible = true;
     tg.MainButton.onClick(() => {
@@ -15,5 +12,9 @@ window.onload = function () {
         window.Telegram.WebApp.sendData("str")
         //window.Telegram.WebApp.MainButton.text = "Rtr";
     });
+    let textName = document.createElement('div');
+    textName.className = "name";
+    textName.innerHTML = tg.initDataUnsafe.query_id;
+    document.body.append(textName);
 
 };
