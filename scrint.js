@@ -2,6 +2,7 @@ window.onload = function () {
     let textName = document.createElement('div');
     textName.className = "name";
     textName.innerHTML = "g";
+    document.body.append(textName);
     
     let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
